@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public class CalculationHistoryDaoImpl implements CalculationHistoryDao {
 
-    private List<Operation> operations = new ArrayList<>();
+    private final List<Operation> operations = new ArrayList<>();
 
     @Override
     public void addNewOperation(Operation calculation) {

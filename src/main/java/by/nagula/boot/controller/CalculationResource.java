@@ -3,9 +3,11 @@ package by.nagula.boot.controller;
 import by.nagula.boot.entity.Operation;
 import by.nagula.boot.service.CalculationHistoryService;
 import by.nagula.boot.service.CalculationService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/calc")
@@ -25,7 +27,7 @@ public class CalculationResource {
 
     @GetMapping(path = "/history/sort/{type}")
     public List<Operation> showAllSorted(@PathVariable String type){
-        return calculationHistoryService.showAllSorted(type);
+         return calculationHistoryService.showAllSorted(type);
     }
 
     @PostMapping("/calc")
