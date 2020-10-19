@@ -20,10 +20,11 @@ public class UserService {
         }
     }
 
-    public Optional<User> showUser(String login){
-        if (userRepository.findByLogin(login).equals(login)){
-            return userRepository.findByLogin(login);
-        }
-        return null;
+    public Optional<User> showUser(long id){
+        return userRepository.findById(id);
+    }
+
+    public Optional<User> showByLogin(String login){
+        return userRepository.findByLogin(login);
     }
 }

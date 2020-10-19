@@ -1,8 +1,9 @@
 POST http://localhost:8080/calc/calc
 Content-Type: application/json
+apiKey: apiKey:3917
 
 {
-  "num1": 81,
+  "num1": 843,
   "num2": 9,
   "type": "div"
   }
@@ -10,6 +11,7 @@ Content-Type: application/json
 ###
 
 GET http://localhost:8080/calc/history
+apiKey: apiKey:3917
 
 ###
 
@@ -22,6 +24,16 @@ Content-Type: application/json
 
 {
   "name": "Test",
+  "login": "test",
+  "password": "test"
+}
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
   "login": "test",
   "password": "test"
 }
